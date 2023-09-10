@@ -53,7 +53,7 @@
             <!-- /.card -->
           </div>
 
-
+          <!--modal add-->
           <div class="modal fade" id="add">
         <div class="modal-dialog">
           <div class="modal-content">

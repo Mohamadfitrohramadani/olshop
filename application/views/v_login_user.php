@@ -1,29 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | <?=$title?></title>
+  <head>
+  	<title>Login |<?=$title?></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?= base_url()?>template_admin/plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="<?= base_url()?>template_admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?= base_url()?>template_admin/dist/css/adminlte.min.css">
-</head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="<?= base_url()?>/index2.html"><b>Toko</b>Batik</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Silahkan Login</p>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="<?= base_url()?>assets/login/css/style.css">
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url(<?= base_url()?>assets/login/images/bg.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Toko Batik Harmoni Warna</h2>
+				</div>
+			</div> 
       <?php 
       echo validation_errors(' <div class="alert alert-warning alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -44,57 +40,36 @@
         echo $this->session->flashdata('pesan');
         echo '</div>';
        }
-
       echo form_open('auth/login_user')
       ?>
-        <div class="input-group mb-3">
-          <input type="text" name="username" class="form-control" placeholder="Username">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Log In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
-       <?php echo form_close()?>
-      
-      <!-- /.social-auth-links -->
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Have an account?</h3>
+		      	<form action="#" class="signin-form">
+		      		<div class="form-group">
+		      			<input type="text" name="username" class="form-control" placeholder="Username"required>
+		      		</div>
+	            <div class="form-group">
+	              <input type="password" name="password" class="form-control" placeholder="Password" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+	            </div>
+	          </form>
+            <?php echo form_close()?>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-     
-    </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
+	<script src="<?= base_url()?>assets/login/js/jquery.min.js"></script>
+  <script src="<?= base_url()?>assets/login/js/popper.js"></script>
+  <script src="<?= base_url()?>assets/login/js/bootstrap.min.js"></script>
+  <script src="<?= base_url()?>assets/login/js/main.js"></script>
 
-<!-- jQuery -->
-<script src="<?= base_url()?>template_admin/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="<?= base_url()?>template_admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<?= base_url()?>template_admin/dist/js/adminlte.min.js"></script>
-</body>
+	</body>
 </html>
+
