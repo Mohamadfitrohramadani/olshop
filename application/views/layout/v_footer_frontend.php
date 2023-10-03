@@ -46,11 +46,11 @@
                         <button type="submit" class="site-btn">Subscribe</button>
                     </form>
                     <div class="footer__social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#" class="fa fa-facebook"><i></i></a>
+                        <a href="#" class="fa fa-twitter"><i></i></a>
+                        <a href="#" class="fa fa-youtube-play"><i></i></a>
+                        <a href="#" class="fa fa-instagram"><i></i></a>
+                        <a href="#" class="fa fa-pinterest"><i></i></a>
                     </div>
                 </div>
             </div>

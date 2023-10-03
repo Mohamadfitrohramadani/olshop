@@ -7,7 +7,6 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ashion | Template</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -34,7 +33,75 @@
    
 
 </head>
+<style>
+    .container {
+        max-width: 1200px; /* Sesuaikan lebar maksimum container sesuai kebutuhan */
+        margin: 0 auto; /* Untuk membuat container berada di tengah halaman */
+    }
 
+    .product__item {
+        margin-bottom: 20px; /* Jarak antara item barang */
+    }
+
+    .product__item__pic {
+        /* Atur tinggi atau lebar gambar barang */
+        height: 300px; /* Sesuaikan dengan tinggi yang Anda inginkan */
+        /* width: 300px; */ /* Jika ingin mengatur lebar, uncomment baris ini dan sesuaikan dengan lebar yang Anda inginkan */
+        overflow: hidden; /* Untuk memotong gambar jika melebihi ukuran yang ditentukan */
+    }
+</style>
+
+<!-- Navbar -->
+<header class="header">
+        <div class="container-fluid">
+            <div class="row">
+               
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="<?= base_url()?>"><img src="<?= base_url()?>assets/ico/logo-batik.jpg" style="border-radius: 10px; width: 60px;" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="<?= base_url()?>">Home</a></li>
+                            <li ><a href="<?= base_url('shop')?>">Toko</a></li>
+                            <li><a href="<?= base_url('detail')?>">Detail Produk</a></li>
+                            <li ><a href="<? base_url('galeri')?>">Galeri</a></li>
+                            <li ><a href="<?= base_url('contact')?>">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <a href="<?= base_url('auth/login_user')?>">Login</a>
+                            <a href="<?= base_url('auth/login_user')?>">Register</a>
+                        </div>
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                <div class="tip">2</div>
+                            </a></li>
+                            <li><a href="#"><span class="icon_bag_alt"></span>
+                                <div class="tip">2</div>
+                            </a></li>
+                            <li><a href="#"><span class="icon_whatsapp_alt"></span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- /.content-header -->
+
+ 
+
+      
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -65,9 +132,6 @@
     </div>
     <!-- Offcanvas Menu End -->
 
-    <!-- Header Section Begin -->
-    
-    <!-- Header Section End -->
 
 <div class="banner_section layout_padding"  style="padding-bottom: 30px;">
     <div id="my_slider" class="carousel slide" data-ride="carousel">
@@ -77,14 +141,14 @@
                 <div class="banner_taital_main">
                    <div class="row">
                       <div class="col-md-12">
-                         <div class="image_1"><img src="<?= base_url()?>ashion/templateslid/Casinal/images/saudagarwpatas.webp"></div>
+                         <div class="image_1"><img src="<?= base_url()?>assets/slider/slid1.1.jpg" ></div>
                       </div>
                    </div>
                 </div>
              </div>
           </div>
           
-          <div class="carousel-item">
+          <!-- <div class="carousel-item">
              <div class="container">
                 <div class="banner_taital_main">
                    <div class="row">
@@ -101,147 +165,38 @@
        </a>
        <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
           <i class="fa fa-arrow-right" style="font-size:24px"></i>
-       </a>
+       </a> -->
     </div>
  </div><br><br>
 <!-- Product Section Begin -->
-<section class="product spad" style="margin-top: 100px;">
-    <div class="container"><br>
+<section class="" style="margin-top: 100px;">
+    <div class="container">
         <div class="text-center">
             <h1 class="rt-header-block__title"><strong>Produk Unggulan</strong></h1>
-        </div><br>
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-               
-            </div>
         </div>
-        <div class="row property__gallery">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/kain-batik-jawa-solo.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/kain-batik-jawa-solo.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Jawa Solo Klasik Semi Tulis Motif Ukel Coletan</a></h6><br>
-                        <div class="product__price">Rp. 425.000</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix men">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/kain-batik-jawa.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/kain-batik-jawa.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Jawa Solo Klasik Sogan Semi Tulis Motif Floral Kupu Coletan</a></h6><br>
-                        <div class="product__price">Rp. 425.000</div>
+
+        <div class="row">
+            <?php foreach ($barang as $key => $value) { ?>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="<?= base_url('assets/gambar/'. $value->gambar)?>">
+                            <ul class="product__hover">
+                                <li><a href="<?= base_url('assets/gambar/'. $value->gambar)?>" class="image-popup arrow_expand"><span></span></a></li>
+                                <li><a href="#" class="icon_heart_alt"><span></span></a></li>
+                                <li><a href="#" class="icon_bag_alt"><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#"><?= $value->nama_barang ?></a></h6>
+                            <div class="product__price">Rp. <?= number_format($value->harga, 0)?></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/kain-batik-solo.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/kain-batik-solo.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Jawa Klasik Sogan Solo Semi Tulis Motif Ceplok Coletan</a></h6><br>
-                        <div class="product__price">Rp. 425.000</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/solo-javanese-antik.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/solo-javanese-antik.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Jawa Klasik Sogan Solo Proses Semi Tulis Motif Pisan Bali</a></h6><br>
-                        <div class="product__price">Rp. 425.000</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/THEBATIK-KAIN-BATIK.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/THEBATIK-KAIN-BATIK.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Jawa Klasik / Batik Solo Motif Anyaman Burung Soga Genes</a></h6><br>
-                        <div class="product__price">Rp. 425.000</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/thebatik-sogan-jawa.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/thebatik-sogan-jawa.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Jawa Klasik Jogja Motif Cakar Seling Kembang Sogan</a></h6><br>
-                        <div class="product__price">Rp. 125.000</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/thebatik-lukis-abstrak.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/thebatik-lukis-abstrak.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Lukis Abstrak Modern Motif Ciprat Kombinasi Polos Hijau</a></h6><br>
-                        <div class="product__price">Rp. 215.000</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?= base_url()?>ashion/img/batik/thebatik-lukis-modern.jpg">
-                        <ul class="product__hover">
-                            <li><a href="<?= base_url()?>ashion/img/batik/thebatik-lukis-modern.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Kain Batik Lukis Modern Kombinasi Polos Hijau Bahan Kemeja Dress Blouse</a></h6><br>
-                        <div class="product__price">Rp. 215.000</div>
-                    </div>
-                </div>
-            </div>
-           
+            <?php } ?>
         </div>
     </div>
 </section>
+
 <!-- Product Section End -->
 
 <div class="text-center">

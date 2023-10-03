@@ -10,9 +10,9 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link rel="stylesheet" href="<?= base_url()?>assets/login/css/style.css">
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
-	<body class="img js-fullheight" style="background-image: url(<?= base_url()?>assets/login/images/bg.jpg);">
+	<body class="img js-fullheight" style="color:white;">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -22,12 +22,12 @@
 			</div> 
       <?php 
       echo validation_errors(' <div class="alert alert-warning alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
       <h5><i class="icon fas fa-exclamation-triangle"></i></h5>',' </div>');
       
       if ($this->session->flashdata('error')) {
        echo '<div class="alert alert-danger alert-dismissible">
-       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
        <h5><i class="icon fas fa-ban"></i></h5>';
        echo $this->session->flashdata('error');
        echo '</div>';
@@ -35,7 +35,7 @@
 
       if ($this->session->flashdata('pesan')) {
         echo '<div class="alert alert-success alert-dismissible">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h5><i class="icon fas fa-check"></i>Succes</h5>';
         echo $this->session->flashdata('pesan');
         echo '</div>';
@@ -54,9 +54,13 @@
 	              <input type="password" name="password" class="form-control" placeholder="Password" required>
 	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	            </div>
+                <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6Ldo8WsoAAAAAO9G2g8JH5xMy-q-MP_N48klaMtW"></div>
+            </div>
 	            <div class="form-group">
 	            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
 	            </div>
+              
 	          </form>
             <?php echo form_close()?>
 		      </div>

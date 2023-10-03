@@ -20,7 +20,6 @@ class User_login {
             
             $this->ci->session->set_userdata('username', $username);
             $this->ci->session->set_userdata('nama_user', $nama_user);
-            $this->ci->session->set_userdata('level', $level);
             redirect('admin');  // Ganti 'admin' dengan halaman yang sesuai
         } else {
             $this->ci->session->set_flashdata('error', 'Username Atau Password Salah!!');

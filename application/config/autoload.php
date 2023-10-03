@@ -29,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | 7. Models
 |
 */
-
+$autoload['packag'] = array();
 /*
 | -------------------------------------------------------------------
 |  Auto-load Packages

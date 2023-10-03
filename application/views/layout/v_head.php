@@ -36,6 +36,5 @@
 <script src="<?= base_url() ?>template_admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url() ?>template_admin/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?= base_url() ?>template_admin/dist/js/demo.js"></script>
+
 </head>

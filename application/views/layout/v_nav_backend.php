@@ -39,7 +39,7 @@
 
           <!-- menu-dashboard -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url('admin')?>" class="nav-link <?php if($this->uri->segment(1)=='admin'){echo "active";}?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -67,12 +67,27 @@
             </a>
           </li>
 
+          <!--Menu-gambar-barang-->
+          <li class="nav-item">
+            <a href="<?= base_url('gambarbarang')?>" class="nav-link <?php if($this->uri->segment(1)=='gambarbarang'){echo "active";}?>">
+              <i class="nav-icon fas fa-image"></i>
+              <p>
+                Gambar Barang
+              </p>
+            </a>
+          </li>
 
+          <!--Menu-gambar-barang-->
+          <li class="nav-item">
+            <a href="<?= base_url('gambarslider')?>" class="nav-link <?php if($this->uri->segment(1)=='gambarslider'){echo "active";}?>">
+              <i class="nav-icon fas fa-image"></i>
+              <p>
+                Gambar slider
+              </p>
+            </a>
+          </li>
 
-
-
-
-               
+     
           <li class="nav-item menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>

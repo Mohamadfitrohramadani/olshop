@@ -13,9 +13,6 @@
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 </div>
-<!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
 
 <script>
   $(function () {
@@ -33,6 +30,12 @@
       "responsive": true,
     });
   });
+</script>
+<script>
+  window.setTimeout(function() {$(".alert").fadeTo(500,0).slideUp(500,function() {
+      $(this).remove()
+    });
+  }, 3000)
 </script>
 </body>
 </html>

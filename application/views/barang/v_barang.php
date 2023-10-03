@@ -45,7 +45,7 @@
                         <td class="text-center"><img src="<?= base_url('assets/gambar/'.$value->gambar)?>" width="150px"></td>
                         
                         <td class="text-center">
-                            <button class="btn btn-warning" data-toggle="modal" data-target="#edit<?=$value->id_barang ?>"><i class="fas fa-edit"></i></button>
+                            <a href="<?= base_url('barang/edit/'.$value->id_barang)?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                             <button class="btn btn-danger" data-toggle="modal" data-target="#delete<?=$value->id_barang ?>"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
@@ -58,3 +58,36 @@
             </div>
             <!-- /.card -->
           </div>
+
+<!-- Modal Delete-->
+<?php foreach ($barang as $key => $value ){?>
+      <div class="modal fade" id="delete<?=$value->id_barang?>">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Delete <?= $value->nama_barang?></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+            <h5>Apakah Anda Yakin Ingin Menghapus Data Ini...?</h5>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <a href="<?= base_url('barang/delete/' . $value->id_barang) ?>"class="btn btn-danger">Delete</a>
+             
+              
+            </div>
+            <?php
+                echo form_close();
+            ?>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+<?php }?>
